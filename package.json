@@ -1,0 +1,22 @@
+{
+  "name": "seattle-reads",
+  "version": "1.0.0",
+  "description": "Code Fellows 301 Final Project",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cadburylion/Seattle-Reads.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cadburylion/Seattle-Reads/issues"
+  },
+  "homepage": "https://github.com/Cadburylion/Seattle-Reads#readme"
+}
