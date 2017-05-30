@@ -35,7 +35,7 @@ var books = [];
 
     books.forEach(function(book){
       console.log(book);
-      book.title = book.title.replace(/\/.*/, '').replace(/\[.*?\]/, '');
+      book.title = book.title.replace(/\/.*/, '').replace(/\,.*/, '').replace(/\[.*?\]/, '');
       // book.title = book.title
       let context = {title: `${book.title}`, type: `The medium is: ${book.usageclass}`};
       let html = template(context);
