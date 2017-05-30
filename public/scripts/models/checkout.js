@@ -4,13 +4,18 @@ var app = app || {};
 
 var books = [];
 
+let compiledHtml = [];
 
 (function(module) {
 
-  function seattleReads(){
+  const checkout = {};
+
+
+  checkout.fetchCheckouts = function(){
     $.ajax({
       url: 'https://data.seattle.gov/resource/tjb6-zsmc.json',
       type: 'GET',
+      async: false,
       data: {
         '$limit' : 20,
       }
@@ -22,25 +27,30 @@ var books = [];
       books.sort(function(a, b) {
         return parseFloat(b.checkouts) - parseFloat(a.checkouts);
       });
-      console.log(`Retrieved ${books.length} records from the dataset!`)
-      postToDom();
+      console.log(`Retrieved ${books.length} records from the dataset!`);
+    })
+    .then(() => {
+      checkout.toHtml();
     });
-  }
+  };
 
-  seattleReads();
 
-  function postToDom(){
+  checkout.toHtml = function(){
     let source = $('#checkout-template').html();
     let template = Handlebars.compile(source);
 
     books.forEach(function(book){
-      console.log(book);
       book.title = book.title.replace(/\/.*/, '').replace(/\,.*/, '').replace(/\[.*?\]/, '');
-      // book.title = book.title
       let context = {title: `${book.title}`, type: `The medium is: ${book.usageclass}`};
-      let html = template(context);
-      console.log(html);
-      $('#checkout-display').append(html);
+      compiledHtml.push(template(context));
     });
-  }
+    return compiledHtml;
+  };
+  //
+  // checkout.getHtml = function() {
+  //   console.log(compiledHtml);
+  //   return compiledHtml;
+  // };
+
+  module.checkout = checkout;
 })(app);
