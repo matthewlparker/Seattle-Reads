@@ -46,11 +46,6 @@ let compiledHtml = [];
     });
     return compiledHtml;
   };
-  //
-  // checkout.getHtml = function() {
-  //   console.log(compiledHtml);
-  //   return compiledHtml;
-  // };
 
   module.checkout = checkout;
 })(app);
