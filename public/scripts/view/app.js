@@ -37,7 +37,7 @@ var books = [];
 
     books.forEach(function(book){
       console.log(book);
-      let context = {title: 'My new post', description: `${book.title} is the most checked out book in  Seattle!`, type: `The medium is: ${book.usageclass}`};
+      let context = {title: `${book.title}`, type: `The medium is: ${book.usageclass}`};
       let html = template(context);
       console.log(html);
       $('#checkout-display').append(html);
