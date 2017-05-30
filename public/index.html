@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Seattle Reads</title>
+    <link rel="stylesheet" href="./styles.base.css" />
+    <link rel="stylesheet" href="./styles.modules.css" />
+    <link rel="stylesheet" href="./styles.state.css" />
+    <link rel="stylesheet" href="./styles.layout.css" />
+    <link rel="stylesheet" href="./styles.icons.css" />
+
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+
+    <script id="checkout-template" type="text/x-handlebars-template">
+      <div class="checkout">
+        <h2>{{title}}</h2>
+        <p>{{description}}</p>
+        <p>{{type}}<p>
+      </div>
+    </script>
+
   </head>
   <body>
     <main>
       <h1>Seattle Reads</h1>
+      <article id="checkout-display">
+      </article>
     </main>
+    <script src="./scripts/view/app.js"></script>
   </body>
 </html>
