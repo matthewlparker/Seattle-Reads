@@ -7,8 +7,6 @@ var books = [];
 
 (function(module) {
 
-
-
   function seattleReads(){
     $.ajax({
       url: 'https://data.seattle.gov/resource/tjb6-zsmc.json',
@@ -37,8 +35,8 @@ var books = [];
 
     books.forEach(function(book){
       console.log(book);
-      book.title = book.title.replace(/\/.*/, '');
-      book.title = book.title.replace(/\[.*?\]/, '');
+      book.title = book.title.replace(/\/.*/, '').replace(/\[.*?\]/, '');
+      // book.title = book.title
       let context = {title: `${book.title}`, type: `The medium is: ${book.usageclass}`};
       let html = template(context);
       console.log(html);
