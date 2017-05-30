@@ -3,17 +3,15 @@
 var app = app || {};
 
 var books = [];
-
 let compiledHtml = [];
 
 (function(module) {
 
   const checkout = {};
 
-
-  checkout.fetchCheckouts = function(){
+  checkout.fetchCheckouts = function(url){
     $.ajax({
-      url: 'https://data.seattle.gov/resource/tjb6-zsmc.json',
+      url: url,
       type: 'GET',
       async: false,
       data: {
@@ -21,6 +19,7 @@ let compiledHtml = [];
       }
     })
     .then(data => {
+      books = [];
       books = data.map(function(book){
         return book;
       }) ;
@@ -38,7 +37,7 @@ let compiledHtml = [];
   checkout.toHtml = function(){
     let source = $('#checkout-template').html();
     let template = Handlebars.compile(source);
-
+    compiledHtml = [];
     books.forEach(function(book){
       book.title = book.title.replace(/\/.*/, '').replace(/\,.*/, '').replace(/\[.*?\]/, '');
       let context = {title: `${book.title}`, type: `The medium is: ${book.usageclass}`};
