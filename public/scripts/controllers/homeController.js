@@ -13,7 +13,7 @@ var app = app || {};
     let url = 'https://data.seattle.gov/resource/tjb6-zsmc.json';
     url += '?checkoutmonth=' + $('#select-month option:selected').attr('value');
     url += '&checkoutyear=' + $('#select-year option:selected').attr('value');
-    app.checkout.fetchCheckouts(url);
+    app.checkout.fetchCheckouts(url, 10);
     app.homeView.renderResults();
   };
 

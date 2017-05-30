@@ -9,13 +9,13 @@ let compiledHtml = [];
 
   const checkout = {};
 
-  checkout.fetchCheckouts = function(url){
+  checkout.fetchCheckouts = function(url, limit){
     $.ajax({
       url: url,
       type: 'GET',
       async: false,
       data: {
-        '$limit' : 20,
+        '$limit' : limit,
       }
     })
     .then(data => {
