@@ -10,13 +10,15 @@ let compiledHtml = [];
 
   const checkout = {};
 
-  checkout.fetchCheckouts = function(url){
+  checkout.fetchCheckouts = function(url, num){
+    books = [];
+
     $.ajax({
       url: url,
       type: 'GET',
       async: false,
       data: {
-        '$limit' : 20,
+        '$limit' : num,
       }
     })
     .then(data => {
@@ -37,6 +39,7 @@ let compiledHtml = [];
   checkout.toHtml = function(){
     let source = $('#checkout-template').html();
     let template = Handlebars.compile(source);
+    compiledHtml = [];
 
     books.forEach(function(book){
       book.title = book.title.replace(/\/.*/, '').replace(/\,.*/, '').replace(/\[.*?\]/, '');
