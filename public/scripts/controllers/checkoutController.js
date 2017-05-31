@@ -15,5 +15,30 @@ var app = app || {};
     if($('#select-usage option:selected').attr('value')) url += '&usageclass=' + $('#select-usage option:selected').attr('value');
     app.checkout.fetchCheckouts(url, $('#range-returns').val());
     app.checkoutView.renderResults();
+
+      //Following code is template to sort checked out items by genre
+
+  //   let lions = [
+  //   {name: 'simba', description: 'lions are fantastic animals'},
+  //   {name: 'sarc', description: 'scar is a total loser'}
+  //   ];
+  //
+  // let heroes = [];
+  //
+  //   function fantasticLions(){
+  //     heroes = lions.filter(function(lion){
+  //       return findWord('fantastic').test(lion.description);
+  //     });
+  //     console.log(heroes);
+  //   }
+  //
+  //   function findWord(word) {
+  //     // console.log(RegExp(word, 'g'));
+  //     return RegExp(word);
+  //   }
+  //
+  //   fantasticLions();
+
+
   });
 })(app);
