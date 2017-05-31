@@ -15,6 +15,8 @@ var app = app || {};
     url += '&checkoutyear=' + $('#select-year option:selected').attr('value');
     app.checkout.fetchCheckouts(url, 10);
     app.homeView.renderResults();
+    //app.checkoutChart.myChart.destroy();
+    app.checkoutChart.getChart('homeCanvas');
   };
 
   homeController.defaultResults();

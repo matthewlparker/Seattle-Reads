@@ -6,9 +6,9 @@ var app = app || {};
   const checkoutController = {};
   $('#button').on('click', function(event) {
     event.preventDefault();
-    let $checkoutDiv = $('#checkout-div');
     $('div').hide();
-    $checkoutDiv.show();
+    $('#checkout-display').empty();
+    $('#checkout-div').show();
 
     let url = 'https://data.seattle.gov/resource/tjb6-zsmc.json';
     url += '?checkoutmonth=' + $('#select-month option:selected').attr('value');
@@ -17,15 +17,11 @@ var app = app || {};
     app.checkout.fetchCheckouts(url, $('#range-returns').val());
     app.checkoutView.renderResults();
 
+    app.checkoutChart.myChart.destroy();
+    app.checkoutChart.getChart('checkoutCanvas');
     sortGenre();
   });
-      //Following code is template to sort checked out items by genre
 
-  //   let lions = [
-  //   {name: 'simba', subject: 'lions are fantastic animals'},
-  //   {name: 'sarc', subject: 'scar is a total loser'}
-  //   ];
-  //
   let genres = ['Fiction', 'Fantasy', 'Comedy', 'Romantic', 'Sci\-Fi', 'Music', 'History'];
   let genresRegExp = RegExp(genres.join('|'), 'g');
   console.log(genresRegExp);
