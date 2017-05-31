@@ -36,7 +36,6 @@ var app = app || {};
   //     // console.log(RegExp(word, 'g'));
   //     return RegExp(word);
   //   }
-  //
   //   fantasticLions();
 
 
