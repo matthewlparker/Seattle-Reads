@@ -15,6 +15,10 @@ var app = app || {};
     if($('#select-usage option:selected').attr('value')) url += '&usageclass=' + $('#select-usage option:selected').attr('value');
     app.checkout.fetchCheckouts(url, $('#range-returns').val());
     app.checkoutView.renderResults();
+    console.log(app.checkoutChart);
+    console.log(app.checkoutChart.getChart);
+
+    app.checkoutChart.getChart('#checkout-canvas');
 
       //Following code is template to sort checked out items by genre
 

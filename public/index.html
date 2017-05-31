@@ -11,7 +11,7 @@
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
     <script id="checkout-template" type="text/x-handlebars-template">
       <div class="checkout">
         <h2>{{title}}</h2>
@@ -19,7 +19,6 @@
         <p>{{checkouts}}</p>
       </div>
     </script>
-
   </head>
   <body>
     <main>
@@ -79,15 +78,17 @@
       <div id="home-div">
         <article id="home-display">
           <h1>The 20 most checked out books in Seattle are:</h1>
-          <canvas id="myChart" width="400" height="400"></canvas>
+          <canvas id="home-canvas" width="400" height="400"></canvas>
         </article>
       </div>
       <div id="checkout-div">
         <article id="checkout-display">
+          <canvas id="checkout-canvas" width="400" height="400"></canvas>
         </article>
       </div>
     </main>
     <script src="./scripts/models/checkout.js"></script>
+    <script src="./scripts/models/checkoutChart.js"></script>
 
     <script src="./scripts/views/homeView.js"></script>
     <script src="./scripts/views/checkoutView.js"></script>
