@@ -19,7 +19,7 @@ var app = app || {};
     app.checkoutChart.myChart.destroy();
     app.checkoutChart.getChart('checkoutCanvas');
 
-      //Following code is template to sort checked out items by genre
+      //Following code is template to sort checked out items by genre 
 
   //   let lions = [
   //   {name: 'simba', description: 'lions are fantastic animals'},
