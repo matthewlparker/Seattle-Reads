@@ -5,6 +5,7 @@ var app = app || {};
 (function(module) {
   let checkoutController = {};
   checkoutController.initCheckout = function(){
+    console.log('running');
     $('div').hide();
     $('#checkout-display').empty();
     $('#checkout-div').show();
