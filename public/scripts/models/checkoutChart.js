@@ -64,7 +64,7 @@ var app = app || {};
     if(genreLengths) {
       ctx = document.getElementById(pieCanvas).getContext('2d');
       checkoutChart.myChart = new Chart(ctx, {
-        type: 'horizontalBar',
+        type: 'pie',
         data: {
           labels: [
             'Fiction',
@@ -77,7 +77,6 @@ var app = app || {};
             'Other'
           ],
           datasets: [{
-            label: 'genre',
             data: genreLengths,
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
@@ -87,18 +86,9 @@ var app = app || {};
               'rgba(153, 102, 255, 0.2)',
               'rgba(255, 159, 64, 0.2)',
               'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)'
+              'rgba(54, 162, 235, 0.2)',
             ]
           }]
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero:true
-              }
-            }]
-          }
         }
       });
     }
