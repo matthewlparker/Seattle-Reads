@@ -4,8 +4,8 @@ var app = app || {};
 
 (function(module) {
   let checkoutController = {};
-  $('#button').on('click', function(event) {
-    event.preventDefault();
+  });
+  checkoutController.initCheckout = function(){
     $('div').hide();
     $('#checkout-display').empty();
     $('#checkout-div').show();
@@ -20,7 +20,8 @@ var app = app || {};
     app.checkoutChart.myChart.destroy();
     app.checkoutChart.getChart('checkoutCanvas');
     sortGenre();
-  });
+  }
+
 
   let genres = ['Fiction', 'Fantasy', 'Comedy', 'Romantic', 'Sci\-Fi', 'Music', 'History'];
   let genresRegExp = RegExp(genres.join('|'), 'g');
