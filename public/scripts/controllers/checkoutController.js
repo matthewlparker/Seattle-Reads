@@ -2,6 +2,8 @@
 
 var app = app || {};
 
+// var bookGenres = [];
+
 (function(module) {
   const checkoutController = {};
   $('#button').on('click', function(event) {
@@ -10,8 +12,8 @@ var app = app || {};
     $('#checkout-display').empty();
     $('#checkout-div').show();
 
-    let url = 'https://data.seattle.gov/resource/tjb6-zsmc.json';
-    url += '?checkoutmonth=' + $('#select-month option:selected').attr('value');
+    let url = 'https://data.seattle.gov/resource/tjb6-zsmc.json?$order=checkouts DESC';
+    url += '&checkoutmonth=' + $('#select-month option:selected').attr('value');
     url += '&checkoutyear=' + $('#select-year option:selected').attr('value');
     if($('#select-usage option:selected').attr('value')) url += '&usageclass=' + $('#select-usage option:selected').attr('value');
     app.checkout.fetchCheckouts(url, $('#range-returns').val());

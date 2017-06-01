@@ -25,9 +25,13 @@ let compiledHtml = [];
       books = data.map(function(book){
         return book;
       }) ;
-      books.sort(function(a, b) {
-        return parseFloat(b.checkouts) - parseFloat(a.checkouts);
-      });
+      // books.sort(function(a, b) {
+      //   console.log(books);
+      //   return parseFloat(b.checkouts) - parseFloat(a.checkouts);
+      // });
+      // cut out elements in array after num
+      // books = books.splice(0, num);
+      console.log(books);
       console.log(`Retrieved ${books.length} records from the dataset!`);
     })
     .then(() => {
