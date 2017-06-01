@@ -8,9 +8,10 @@ var app = app || {};
 
   //this renders each element to the DOM
   aboutView.renderResults = function () {
-    compiledHtml.forEach(function(el) {
-      $('#about-display').append(el);
-    });
+    $('#about-div').append("<img src='./images/IMG951723.jpg' />");
+    $('#about-div').append("<img src='./images/Me.jpg' />");
+    $('#about-div').append("<img src='./images/ryanturner.jpg' />");
+    $('#about-div').append("<img src='./images/mathewcmartin.jpg' />");
   };
 
   module.aboutView = aboutView;
