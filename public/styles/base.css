@@ -1,7 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Poiret+One|Varela+Round);
+
 
 html, body {
-  margin: 0;
+  margin-left: 100px;
+  margin-top: 40px;
   padding: 0;
 }
 
@@ -63,5 +64,5 @@ html, body {
 
 
 #slide {
-  display: none; 
+  display: none;
 }
