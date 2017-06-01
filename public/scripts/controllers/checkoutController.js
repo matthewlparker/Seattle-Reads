@@ -4,6 +4,8 @@ var app = app || {};
 
 (function(module) {
   let checkoutController = {};
+  let genreLengths = [];
+
   $('#button').on('click', function(event) {
     event.preventDefault();
     $('div').hide();
@@ -17,9 +19,11 @@ var app = app || {};
     app.checkout.fetchCheckouts(url, $('#range-returns').val());
     app.checkoutView.renderResults();
 
-    app.checkoutChart.myChart.destroy();
-    app.checkoutChart.getChart('checkoutCanvas');
     sortGenre();
+
+    app.checkoutChart.myChart.destroy();
+    console.log(genreLengths);
+    app.checkoutChart.getChart('checkoutBarCanvas', 'checkoutPieCanvas', genreLengths);
   });
 
   let genres = ['Fiction', 'Fantasy', 'Comedy', 'Romantic', 'Sci\-Fi', 'Music', 'History'];
@@ -28,8 +32,15 @@ var app = app || {};
 
   function sortGenre(){
 
-    let checkoutController = {};
+    //let checkoutController = {};
+    checkoutController.Fiction = [];
+    checkoutController.Fantasy = [];
+    checkoutController.Comedy = [];
+    checkoutController.Romantic = [];
+    checkoutController['sci\-fi'] = [];
+    checkoutController.music = [];
     checkoutController.other= [];
+
     books.forEach(function(checkout){
       if(!checkout.subjects){
         checkoutController.other.push(checkout);
@@ -48,7 +59,15 @@ var app = app || {};
       }
     });
     console.log(checkoutController);
-
+    genreLengths = [
+      checkoutController.Fiction.length,
+      checkoutController.Fantasy.length,
+      checkoutController.Comedy.length,
+      checkoutController.Romantic.length,
+      checkoutController['sci\-fi'].length,
+      checkoutController.music.length,
+      checkoutController.other.length
+    ];
   }
 
   module.checkoutController = checkoutController;
