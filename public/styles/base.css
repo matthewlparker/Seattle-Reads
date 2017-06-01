@@ -1,6 +1,7 @@
 
 
 html, body {
+  background-color: #FEF8E8;
   margin-left: 100px;
   margin-top: 40px;
   padding: 0;
@@ -16,7 +17,7 @@ html, body {
       -webkit-transition-delay: 0, 0, 0, 0.1s;
   -moz-transition: all 0.15s ease-out 0;
   transition: all 0.45s ease-out 0;
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 20px;
   z-index: 1;
@@ -36,10 +37,7 @@ html, body {
   transition: all 0.15s ease-out 0;
   width: 8rem;
   padding: 1.5em;
-  background: #EEF2D0;
-
-
-
+  background: #ECA878;
 }
 
 .sidebar ul {
@@ -89,7 +87,7 @@ html, body {
 		width: 50px;
 		margin:0px auto;
 		margin-top: 0;
-		box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+		box-shadow: 0px 2px 1px white inset, 0px -2px 8px #FEF8E8, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
 		-webkit-transition:box-shadow 0.5s;
   font-size: 12px;
   border-radius: 8px;
