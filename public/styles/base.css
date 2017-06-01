@@ -1,8 +1,23 @@
 html, body {
-  background-color: #FEF8E8;
-  margin-left: 100px;
+  /*background-color: #FEF8E8;*/
   margin-top: 40px;
+}
+
+body {
+  background: url("/images/hero-images/library-hero.jpg") no-repeat top center fixed;
+  background-size: cover;
+  margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+canvas {
+  background-color: #f7e7c0;
+  opacity: .98;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .toggle {
@@ -125,11 +140,11 @@ html, body {
   text-align: center;
 }
 
- .min-to-max{
-   text-align: center;
-   width: 80%;
-   margin-top: 10px;
-   margin-left: 10%;
-   margin-right: 10%;
-   height: 30px;
- }
+.min-to-max{
+  text-align: center;
+  width: 80%;
+  margin-top: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 30px;
+}

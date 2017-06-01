@@ -16,4 +16,31 @@
     padding: 1.5em;
     background: #ECA878;
   }
+
+  #range-returns{
+    width: 60%;
+  }
+
+  .min-to-max {
+    /*margin: 0 auto;
+    text-align: center;
+    width: 70%;
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 30px;*/
+  }
+
+
+  #button {
+    margin-top: 20px;
+  }
+
+  .checkout {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f7e7c0;
+    border: 1px solid #ECA878;
+    width: 50%;
+  }
 }
