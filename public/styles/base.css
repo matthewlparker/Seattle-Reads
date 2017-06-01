@@ -10,7 +10,10 @@ html, body {
   text-decoration: none;
   font-size: 2em;
   color: rgba(0, 0, 0, 0.61);
-  -webkit-transition: all 0.15s ease-out 0;
+  -webkit-transition-property: left, top, background, -webkit-transform;
+      -webkit-transition-duration: 0.1s, 0.1s, 0.1s, 0.1s;
+      -webkit-transition-timing-function: ease-out, ease-in, linear, ease-in-out;
+      -webkit-transition-delay: 0, 0, 0, 0.1s;
   -moz-transition: all 0.15s ease-out 0;
   transition: all 0.45s ease-out 0;
   position: fixed;
@@ -25,12 +28,18 @@ html, body {
   top: 0px;
   bottom: 0px;
   left: -190px;
-  -webkit-transition: all 0.15s ease-out 0;
+  -webkit-transition-property: left, top, background, -webkit-transform;
+      -webkit-transition-duration: 0.1s, 0.1s, 0.1s, 0.1s;
+      -webkit-transition-timing-function: ease-out, ease-in, linear, ease-in-out;
+      -webkit-transition-delay: 0, 0, 0, 0.1s;
   -moz-transition: all 0.15s ease-out 0;
   transition: all 0.15s ease-out 0;
   width: 8rem;
   padding: 1.5em;
   background: #19C4BC;
+
+
+
 }
 
 .sidebar ul {
@@ -59,7 +68,7 @@ html, body {
  }
 
 #slide:checked + .container .toggle {
-  left: 200px;
+  transform: translateY(-10px);
  }
 
 
