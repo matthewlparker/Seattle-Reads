@@ -8,7 +8,6 @@ var app = app || {};
 
 
   checkoutController.initCheckout = function(){
-    console.log('running');
     $('div').hide();
     $('#checkout-display').empty();
     $('#checkout-div').show();
@@ -23,8 +22,8 @@ var app = app || {};
     sortGenre();
 
     app.checkoutChart.myChart.destroy();
-    console.log(genreLengths);
     app.checkoutChart.getChart('checkoutBarCanvas', 'checkoutPieCanvas', genreLengths);
+    $('#checkoutPieCanvas').hide();
   };
 
 
@@ -60,7 +59,6 @@ var app = app || {};
         }
       }
     });
-    console.log(checkoutController);
     genreLengths = [
       checkoutController.Fiction.length,
       checkoutController.Fantasy.length,

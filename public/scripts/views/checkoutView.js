@@ -13,5 +13,19 @@ var app = app || {};
     });
   };
 
+  $('#chart-button').on('click', function() {
+    if($('#chart-button').attr('visible') === '1') {
+      $('#chart-button').attr('visible', '0');
+      $('#checkoutBarCanvas').hide();
+      $('#checkoutPieCanvas').show();
+      $('#chart-button').text('Checkouts');
+    } else {
+      $('#chart-button').attr('visible', '1');
+      $('#checkoutPieCanvas').hide();
+      $('#checkoutBarCanvas').show();
+      $('#chart-button').text('Genres');
+    }
+  });
+
   module.checkoutView = checkoutView;
 })(app);
