@@ -1,10 +1,23 @@
-
-
 html, body {
-  background-color: #FEF8E8;
-  margin-left: 100px;
+  /*background-color: #FEF8E8;*/
   margin-top: 40px;
+}
+
+body {
+  background: url("/images/hero-images/library-hero.jpg") no-repeat top center fixed;
+  background-size: cover;
+  margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+canvas {
+  background-color: #f7e7c0;
+  opacity: .98;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .toggle {
@@ -17,7 +30,7 @@ html, body {
       -webkit-transition-delay: 0, 0, 0, 0.1s;
   -moz-transition: all 0.15s ease-out 0;
   transition: all 0.45s ease-out 0;
-  position: absolute;
+  position: fixed;
   top: 20px;
   left: 20px;
   z-index: 1;
@@ -28,7 +41,7 @@ html, body {
   position: fixed;
   top: 0px;
   bottom: 0px;
-  /*left: 190px;*/
+  /*left: -190px;*/
   left: -100%;
   -webkit-transition-property: left, top, background, -webkit-transform;
       -webkit-transition-duration: 0.1s, 0.1s, 0.1s, 0.1s;
@@ -107,4 +120,39 @@ html, body {
 .literature-font {
   /*font-family: 'Goudy Bookletter 1911', serif;*/
   font-family: 'Old Standard TT', serif;
+}
+
+#select-year,#select-month, #select-type {
+  margin: 0 auto;
+  display: block;
+  margin-top: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  height: 35px;
+  text-align: center;
+}
+
+#range-returns {
+  display: inline;
+  width: 80%;
+}
+.sidebar-title {
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+  display: block;
+}
+
+.number-of-returns{
+  text-align: center;
+}
+
+.min-to-max{
+  text-align: center;
+  width: 80%;
+  margin-top: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 30px;
 }

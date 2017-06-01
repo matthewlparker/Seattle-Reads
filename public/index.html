@@ -28,7 +28,7 @@
     <section class="container">
       <label for="slide" class="toggle">☰</label>
       <nav class="sidebar">
-        <h1>Seattle Reads</h1>
+        <h1 class="sidebar-title">Seattle Reads</h1>
         <select id="select-month">
           <option value="1">January</option>
           <option value="2">February</option>
@@ -67,9 +67,9 @@
           <option value="MUSIC">Music</option>
           <option value="SONG">Song</option>
         </select>
-        <p>Number of returns</p>
-        <p>  Min(1)    to    Max(10)
-          <input id="range-returns" type="range" min="1" max="10" list="tickmarks">
+        <p class="number-of-returns">Number of returns</p>
+        <!-- <p class="min-to-max">  Min(1)    to    Max(10)</p> -->
+          <p class="min-to-max">1<input id="range-returns" type="range" min="1" max="10" list="tickmarks">10</p>
           <datalist id="tickmarks">
             <option value="1" label="1"></option>
             <option value="2"></option>
