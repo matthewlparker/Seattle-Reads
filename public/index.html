@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Seattle Reads</title>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Old+Standard+TT" rel="stylesheet">
   <link rel="stylesheet" href="/styles/base.css" />
   <link rel="stylesheet" href="/styles/modules.css" />
   <link rel="stylesheet" href="/styles/state.css" />
@@ -31,8 +33,8 @@
           <option value="1">January</option>
           <option value="2">February</option>
           <option value="3">March</option>
-          <option value="4">April</option>
-          <option value="5" selected>May</option>
+          <option value="4"selected>April</option>
+          <option value="5">May</option>
           <option value="6">June</option>
           <option value="7">July</option>
           <option value="8">August</option>
@@ -53,15 +55,15 @@
           <option value="2013">2013</option>
           <option value="2014">2014</option>
           <option value="2015">2015</option>
-          <option value="2016"selected>2016</option>
-          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+          <option value="2017"selected>2017</option>
         </select>
         <select id="select-type">
           <option value=""selected>All</option>
           <option value="BOOK">Book</option>
           <option value="EBOOK">E-Book</option>
           <option value="MAGAZINE">Magazine</option>
-          <option value="MOVIE">Movie</option>
+          <option value="VIDEODISK">Movie</option>
           <option value="MUSIC">Music</option>
           <option value="SONG">Song</option>
         </select>
@@ -85,12 +87,12 @@
       </nav>
     </section>
     <main>
-      <div id="home-div">
+      <div id="home-div" class="literature-font">
         <h1>The 20 most checked out books in Seattle are:</h1>
         <canvas id="homeCanvas" width="400" height="400"></canvas>
         <article id="home-display"></article>
       </div>
-      <div id="checkout-div">
+      <div id="checkout-div" class="literature-font">
         <canvas id="checkoutBarCanvas" width="400" height="400"></canvas>
         <canvas id="checkoutPieCanvas" width="400" height="400"></canvas>
         <button id="chart-button" name="chart-button" visible="1">Genres</button>
