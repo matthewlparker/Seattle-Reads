@@ -6,8 +6,8 @@ var app = app || {};
   let checkoutController = {};
   let genreLengths = [];
 
-  $('#button').on('click', function(event) {
-    event.preventDefault();
+
+  checkoutController.initCheckout = function(){
     $('div').hide();
     $('#checkout-display').empty();
     $('#checkout-div').show();
@@ -24,7 +24,8 @@ var app = app || {};
     app.checkoutChart.myChart.destroy();
     console.log(genreLengths);
     app.checkoutChart.getChart('checkoutBarCanvas', 'checkoutPieCanvas', genreLengths);
-  });
+  };
+
 
   let genres = ['Fiction', 'Fantasy', 'Comedy', 'Romantic', 'Sci\-Fi', 'Music', 'History'];
   let genresRegExp = RegExp(genres.join('|'), 'g');

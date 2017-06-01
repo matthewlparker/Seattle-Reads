@@ -62,7 +62,26 @@ html, body {
   left: 200px;
  }
 
-
 #slide {
   display: none;
+}
+
+#button {
+  background: #ECECEC;
+		border-radius: 15px;
+		padding: 10px 20px;
+		display: block;
+		font-family: arial;
+		font-weight: bold;
+		color:#7f7f7f;
+		text-decoration: none;
+		text-shadow:0px 1px 0px #fff;
+		border:1px solid #a7a7a7;
+		width: 50px;
+		margin:0px auto;
+		margin-top: 0;
+		box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+		-webkit-transition:box-shadow 0.5s;
+  font-size: 12px;
+  border-radius: 8px;
 }

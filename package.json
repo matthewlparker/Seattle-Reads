@@ -4,7 +4,8 @@
   "description": "Code Fellows 301 Final Project",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "page": "^1.7.1"
   },
   "devDependencies": {},
   "scripts": {
