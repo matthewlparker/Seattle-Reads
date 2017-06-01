@@ -52,8 +52,7 @@ canvas {
   /*width: 8rem;*/
   width: 100%;
   /*padding: 1.5em;*/
-  background: #ECA878;
-  opacity: .99;
+  background: #C5A075;
 }
 
 .sidebar ul {
@@ -71,6 +70,15 @@ canvas {
   cursor: pointer;
   text-decoration: none;
   line-height: 200%;
+}
+  h1 {
+  font-family: 'Poiret One', cursive;
+
+}
+.page-title {
+  font-size: 5em;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .sidebar a:hover {

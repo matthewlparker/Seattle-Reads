@@ -84,11 +84,12 @@
           </datalist>
         </p>
         <a id="button" href="/checkouts">Submit</a>
+        <a id="about-button" href="/about">About Us</a>
       </nav>
     </section>
     <main>
       <div id="home-div" class="literature-font">
-        <h1>The 20 most checked out books in Seattle are:</h1>
+        <h1 class="page-title">Seattle Reads</h1>
         <canvas id="homeCanvas" width="400" height="400"></canvas>
         <article id="home-display"></article>
       </div>
@@ -98,11 +99,7 @@
         <button id="chart-button" name="chart-button" visible="1">Genres</button>
         <article id="checkout-display"></article>
       </div>
-      <div class="aboutCanvas">
-        <canvas id="aboutCanvas" width="400" height="400"></canvas>
-        <article id="about-display">
-        </article>
-      </div>
+      <div id="about-div"></div>
     </main>
     <script src="./scripts/models/checkout.js"></script>
     <script src="./scripts/models/checkoutChart.js"></script>
