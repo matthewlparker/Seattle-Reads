@@ -13,7 +13,7 @@ var app = app || {};
 
     let ctx = document.getElementById(canvas).getContext('2d');
     checkoutChart.myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'horizontalBar',
         data: {
             labels: bookTitles,
             datasets: [{
