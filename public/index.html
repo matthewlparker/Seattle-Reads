@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Seattle Reads</title>
-    <link rel="stylesheet" href="/styles/base.css" />
-    <link rel="stylesheet" href="/styles/modules.css" />
-    <link rel="stylesheet" href="/styles/state.css" />
-    <link rel="stylesheet" href="/styles/layout.css" />
-    <link rel="stylesheet" href="/styles/icons.css" />
-    <link src="https://fonts.googleapis.com/css?family=Poiret+One|Varela+Round">
-    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
-    <script id="checkout-template" type="text/x-handlebars-template">
-      <div class="checkout">
-        <h2>{{title}}</h2>
-        <p>{{type}}<p>
+<head>
+  <title>Seattle Reads</title>
+  <link rel="stylesheet" href="/styles/base.css" />
+  <link rel="stylesheet" href="/styles/modules.css" />
+  <link rel="stylesheet" href="/styles/state.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/icons.css" />
+  <link src="https://fonts.googleapis.com/css?family=Poiret+One|Varela+Round">
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+  <script id="checkout-template" type="text/x-handlebars-template">
+    <div class="checkout">
+      <h2>{{title}}</h2>
+      <p>{{type}}<p>
         <p>{{checkouts}}</p>
       </div>
     </script>
@@ -23,68 +23,68 @@
   <body>
 
     <input type="checkbox" id="slide" name="" value="" />
-    	<section class="container">
-    		<label for="slide" class="toggle">☰</label>
-    		<nav class="sidebar">
-            <h1>Seattle Reads</h1>
-            <select id="select-month">
-              <option value="1">January</option>
-              <option value="2">February</option>
-              <option value="3">March</option>
-              <option value="4">April</option>
-              <option value="5" selected>May</option>
-              <option value="6">June</option>
-              <option value="7">July</option>
-              <option value="8">August</option>
-              <option value="9">September</option>
-              <option value="10">October</option>
-              <option value="11">November</option>
-              <option value="12">December</option>
-            </select>
-            <select id="select-year">
-              <option value="2005">2005</option>
-              <option value="2006">2006</option>
-              <option value="2007">2007</option>
-              <option value="2008">2008</option>
-              <option value="2009">2009</option>
-              <option value="2010">2010</option>
-              <option value="2011">2011</option>
-              <option value="2012">2012</option>
-              <option value="2013">2013</option>
-              <option value="2014">2014</option>
-              <option value="2015">2015</option>
-              <option value="2016"selected>2016</option>
-              <option value="2017">2017</option>
-            </select>
-             <select id="select-type">
-              <option value=""selected>All</option>
-              <option value="BOOK">Book</option>
-              <option value="EBOOK">E-Book</option>
-              <option value="MAGAZINE">Magazine</option>
-              <option value="MOVIE">Movie</option>
-              <option value="MUSIC">Music</option>
-              <option value="SONG">Song</option>
-      </select>
-            <p>Number of returns</p>
-            <p>  Min(1)    to    Max(10)
-              <input id="range-returns" type="range" min="1" max="10" list="tickmarks">
-              <datalist id="tickmarks">
-                <option value="1" label="1">
-                  <option value="2">
-                    <option value="3">
-                      <option value="4">
-                        <option value="5" label="5">
-                          <option value="6">
-                            <option value="7">
-                              <option value="8">
-                                <option value="9">
-                                  <option value="10" label="10">
-                                  </datalist>
-                                  </p>
-                                  <a id="button" href="/checkouts">Submit</a>
-                                </nav>
-                              </section>
-                            <main>
+    <section class="container">
+      <label for="slide" class="toggle">☰</label>
+      <nav class="sidebar">
+        <h1>Seattle Reads</h1>
+        <select id="select-month">
+          <option value="1">January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5" selected>May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+        <select id="select-year">
+          <option value="2005">2005</option>
+          <option value="2006">2006</option>
+          <option value="2007">2007</option>
+          <option value="2008">2008</option>
+          <option value="2009">2009</option>
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2012">2012</option>
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016"selected>2016</option>
+          <option value="2017">2017</option>
+        </select>
+        <select id="select-type">
+          <option value=""selected>All</option>
+          <option value="BOOK">Book</option>
+          <option value="EBOOK">E-Book</option>
+          <option value="MAGAZINE">Magazine</option>
+          <option value="MOVIE">Movie</option>
+          <option value="MUSIC">Music</option>
+          <option value="SONG">Song</option>
+        </select>
+        <p>Number of returns</p>
+        <p>  Min(1)    to    Max(10)
+          <input id="range-returns" type="range" min="1" max="10" list="tickmarks">
+          <datalist id="tickmarks">
+            <option value="1" label="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5" label="5"></option>
+            <option value="6"></option>
+            <option value="7"></option>
+            <option value="8"></option>
+            <option value="9"></option>
+            <option value="10" label="10"></option>
+          </datalist>
+        </p>
+        <a id="button" href="/checkouts">Submit</a>
+      </nav>
+    </section>
+    <main>
       <div id="home-div">
         <h1>The 20 most checked out books in Seattle are:</h1>
         <canvas id="homeCanvas" width="400" height="400"></canvas>
@@ -106,5 +106,6 @@
     <script src="./scripts/controllers/homeController.js"></script>
     <script src="./scripts/controllers/checkoutController.js"></script>
     <script src="./scripts/controllers/aboutController.js"></script>
+    <script src="./scripts/controllers/routes.js"></script>
   </body>
-</html>
+  </html>

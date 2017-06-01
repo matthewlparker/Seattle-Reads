@@ -8,6 +8,7 @@ var app = app || {};
 
 
   checkoutController.initCheckout = function(){
+    console.log('running');
     $('div').hide();
     $('#checkout-display').empty();
     $('#checkout-div').show();
