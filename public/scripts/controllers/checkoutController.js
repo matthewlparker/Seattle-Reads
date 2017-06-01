@@ -5,6 +5,7 @@ var app = app || {};
 (function(module) {
   let checkoutController = {};
   checkoutController.initCheckout = function(){
+    console.log('running');
     $('div').hide();
     $('#checkout-display').empty();
     $('#checkout-div').show();
@@ -19,7 +20,7 @@ var app = app || {};
     app.checkoutChart.myChart.destroy();
     app.checkoutChart.getChart('checkoutCanvas');
     sortGenre();
-  }
+  };
 
 
   let genres = ['Fiction', 'Fantasy', 'Comedy', 'Romantic', 'Sci\-Fi', 'Music', 'History'];
