@@ -6,7 +6,6 @@ var app = app || {};
 
   const homeView = {};
 
-  //this renders each element to the DOM
   homeView.renderResults = function () {
     compiledHtml.forEach(function(el) {
       $('#home-display').append(el);

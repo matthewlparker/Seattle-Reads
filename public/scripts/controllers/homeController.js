@@ -7,6 +7,7 @@ var app = app || {};
 
   homeController.defaultResults = function() {
     let $homeDiv = $('#home-div');
+    $('#about-div').hide();
     $('#checkout-div').hide();
     $homeDiv.show();
 
