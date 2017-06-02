@@ -1,6 +1,7 @@
 html, body {
   /*background-color: #FEF8E8;*/
   margin-top: 40px;
+  z-index: 0;
 }
 
 body {
@@ -12,9 +13,10 @@ body {
   width: 100%;
 }
 
-canvas {
-  background-color: #f7e7c0;
+main {
+  background-color: #cccccc ;
   opacity: .98;
+  height: 100%;
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
@@ -35,6 +37,7 @@ canvas {
   left: 20px;
   z-index: 1;
   cursor: pointer;
+  z-index: 110;
 }
 
 .sidebar {
@@ -52,7 +55,8 @@ canvas {
   /*width: 8rem;*/
   width: 100%;
   /*padding: 1.5em;*/
-  background: #C5A075;
+  background: #cccccc;
+  z-index: 100;
 }
 
 .sidebar ul {
@@ -118,8 +122,8 @@ canvas {
 }
 
 .literature-font {
-  /*font-family: 'Goudy Bookletter 1911', serif;*/
-  font-family: 'Old Standard TT', serif;
+  /*font-family: 'Old Standard TT', serif;*/
+  /*opacity: 1;*/
 }
 
 #select-year,#select-month, #select-type {
