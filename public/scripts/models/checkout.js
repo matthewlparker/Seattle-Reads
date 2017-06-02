@@ -25,14 +25,6 @@ let compiledHtml = [];
       books = data.map(function(book){
         return book;
       }) ;
-      // books.sort(function(a, b) {
-      //   console.log(books);
-      //   return parseFloat(b.checkouts) - parseFloat(a.checkouts);
-      // });
-      // cut out elements in array after num
-      // books = books.splice(0, num);
-      console.log(books);
-      console.log(`Retrieved ${books.length} records from the dataset!`);
     })
     .then(() => {
       checkout.toHtml();
@@ -47,7 +39,7 @@ let compiledHtml = [];
 
     books.forEach(function(book){
       book.title = book.title.replace(/\/.*/, '').replace(/\,.*/, '').replace(/\[.*?\]/, '');
-      let context = {title: `${book.title}`, type: `The medium is: ${book.materialtype}`, checkouts: `Number of checkouts: ${book.checkouts}`};
+      let context = {title: `${book.title}`, publisher: `Published by: ${book.publisher}`, type: `The medium is: ${book.materialtype}`, checkouts: `Checkouts: ${book.checkouts}`};
       compiledHtml.push(template(context));
     });
     return compiledHtml;
