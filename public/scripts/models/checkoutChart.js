@@ -7,7 +7,6 @@ var app = app || {};
   const checkoutChart = {};
 
   checkoutChart.getChart = function (barCanvas, pieCanvas, genreLengths) {
-    console.log('chart', pieCanvas);
     let bookTitles = books.map(book => book.title);
     let bookCheckouts = books.map(book => book.checkouts);
 
