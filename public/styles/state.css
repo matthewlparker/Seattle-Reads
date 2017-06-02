@@ -14,7 +14,7 @@
     width: 8rem;
     /*width: 100%;*/
     padding: 1.5em;
-    background: #ECA878;
+    background: #cccccc;
   }
 
   #range-returns{
@@ -39,8 +39,8 @@
   .checkout {
     margin: 0 auto;
     text-align: center;
-    background-color: #f7e7c0;
-    border: 1px solid #ECA878;
-    width: 50%;
+    /*background-color: #f7e7c0;*/
+    /*border: 1px solid #ECA878;*/
+    width: 80%;
   }
 }
