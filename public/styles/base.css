@@ -13,7 +13,6 @@ body {
 }
 
 main {
-  /*background-color: r*/
   background: linear-gradient(to bottom, rgba(128, 128, 128, 0.7), rgba(128, 128, 128, .9));
   opacity: .98;
   height: 100%;
@@ -52,7 +51,12 @@ main {
   -moz-transition: all 0.15s ease-out 0;
   transition: all 0.15s ease-out 0;
   width: 100%;
+<<<<<<< HEAD
+  /*padding: 1.5em;*/
+  background: rgba(150, 150, 150, 0.9);
+=======
   background: #cccccc;
+>>>>>>> 3f10df4b62af4fba970485b8c2f08a60da37486d
   z-index: 100;
 }
 
