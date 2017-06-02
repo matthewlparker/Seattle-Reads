@@ -7,13 +7,11 @@ var app = app || {};
   const checkoutChart = {};
 
   checkoutChart.getChart = function (barCanvas, pieCanvas, genreLengths) {
-    console.log('chart', pieCanvas);
     let bookTitles = books.map(book => book.title);
     let bookCheckouts = books.map(book => book.checkouts);
 
     let ctx = document.getElementById(barCanvas).getContext('2d');
-    checkoutChart.myChart = new Chart(ctx, {
-      // backgroundColor: '#F5DEB3',
+    checkoutChart.myBarChart = new Chart(ctx, {
       type: 'bar',
       data: {
         labels: bookTitles,
@@ -64,7 +62,7 @@ var app = app || {};
 
     if(genreLengths) {
       ctx = document.getElementById(pieCanvas).getContext('2d');
-      checkoutChart.myChart = new Chart(ctx, {
+      checkoutChart.myPieChart = new Chart(ctx, {
         type: 'pie',
         data: {
           labels: [

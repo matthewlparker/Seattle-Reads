@@ -1,5 +1,4 @@
 html, body {
-  /*background-color: #FEF8E8;*/
   margin-top: 40px;
   z-index: 0;
 }
@@ -45,7 +44,6 @@ main {
   position: fixed;
   top: 0px;
   bottom: 0px;
-  /*left: -190px;*/
   left: -100%;
   -webkit-transition-property: left, top, background, -webkit-transform;
       -webkit-transition-duration: 0.1s, 0.1s, 0.1s, 0.1s;
@@ -53,9 +51,7 @@ main {
       -webkit-transition-delay: 0, 0, 0, 0.1s;
   -moz-transition: all 0.15s ease-out 0;
   transition: all 0.15s ease-out 0;
-  /*width: 8rem;*/
   width: 100%;
-  /*padding: 1.5em;*/
   background: #cccccc;
   z-index: 100;
 }
@@ -110,7 +106,6 @@ main {
 
 #button {
   background: #ECECEC;
-		border-radius: 15px;
 		padding: 10px 20px;
 		display: block;
 		font-family: arial;
@@ -122,7 +117,6 @@ main {
 		width: 50px;
 		margin:0 auto;
 		margin-top: 0;
-		box-shadow: 0px 2px 1px white inset, 0px -2px 8px #FEF8E8, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
 		-webkit-transition:box-shadow 0.5s;
   font-size: 12px;
   border-radius: 8px;
@@ -159,8 +153,7 @@ main {
 }
 
 .literature-font {
-  /*font-family: 'Old Standard TT', serif;*/
-  /*opacity: 1;*/
+
 }
 
 #select-year,#select-month, #select-type {
