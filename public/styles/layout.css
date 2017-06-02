@@ -1,0 +1,12 @@
+
+.about {
+  display: inline-block;
+  margin-left: 2%;
+  margin-right: 2%;
+  text-align: center;
+  width: 44%;
+}
+
+.about a {
+  text-decoration: none;
+}
