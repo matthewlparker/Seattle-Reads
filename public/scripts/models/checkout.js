@@ -39,7 +39,7 @@ let compiledHtml = [];
 
     books.forEach(function(book){
       book.title = book.title.replace(/\/.*/, '').replace(/\,.*/, '').replace(/\[.*?\]/, '');
-      let context = {title: `${book.title}`, publisher: `Published by: ${book.publisher}`, type: `The medium is: ${book.materialtype}`, checkouts: `Checkouts: ${book.checkouts}`};
+      let context = {title: `${book.title}`, publisher: `Published by: ${book.publisher}`, type: `Checkout type: ${book.materialtype}`, checkouts: `Checkouts: ${book.checkouts}`};
       compiledHtml.push(template(context));
     });
     return compiledHtml;
