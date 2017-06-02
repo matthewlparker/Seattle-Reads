@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/styles/state.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
   <link rel="stylesheet" href="/styles/icons.css" />
-  <link src="https://fonts.googleapis.com/css?family=Poiret+One|Varela+Round">
+  <link src="https://fonts.googleapis.com/css?family=Poiret+One|Varela+Round" rel="stylesheet">
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
@@ -18,7 +18,7 @@
     <div class="checkout">
       <h2>{{title}}</h2>
       <p>{{type}}<p>
-        <p>{{checkouts}}</p>
+      <p>{{checkouts}}</p>
       </div>
     </script>
   </head>
@@ -94,12 +94,15 @@
         <article id="home-display"></article>
       </div>
       <div id="checkout-div" class="literature-font">
+        <h1 class="page-title">Seattle Reads</h1>
+        <button id="chart-button" name="chart-button" visible="1">Genres</button>
         <canvas id="checkoutBarCanvas" width="400" height="400"></canvas>
         <canvas id="checkoutPieCanvas" width="400" height="400"></canvas>
-        <button id="chart-button" name="chart-button" visible="1">Genres</button>
         <article id="checkout-display"></article>
       </div>
-      <div id="about-div"></div>
+
+      <div id="about-div" class="literature-font"></div>
+
     </main>
     <footer>
       <div id="about-div"><a href="/about"></a></div>
@@ -114,4 +117,4 @@
     <script src="./scripts/controllers/aboutController.js"></script>
     <script src="./scripts/controllers/routes.js"></script>
   </body>
-  </html>
+ </html>
