@@ -21,7 +21,8 @@ var app = app || {};
 
     sortGenre();
 
-    app.checkoutChart.myChart.destroy();
+    app.checkoutChart.myBarChart.destroy();
+    if(app.checkoutChart.myPieChart) app.checkoutChart.myPieChart.destroy();
     app.checkoutChart.getChart('checkoutBarCanvas', 'checkoutPieCanvas', genreLengths);
     if($('#chart-button').attr('visible') === '1') $('#checkoutPieCanvas').hide();
   };

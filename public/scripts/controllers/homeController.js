@@ -16,7 +16,6 @@ var app = app || {};
     // url += '&materialtype=' + $('#select-type option:selected').attr('value');
     app.checkout.fetchCheckouts(url, 10);
     app.homeView.renderResults();
-    //app.checkoutChart.myChart.destroy();
     app.checkoutChart.getChart('homeCanvas');
   };
 
