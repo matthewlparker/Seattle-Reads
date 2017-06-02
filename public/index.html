@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="/styles/state.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
   <link rel="stylesheet" href="/styles/icons.css" />
-  <link src="https://fonts.googleapis.com/css?family=Poiret+One|Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Berkshire+Swash" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Courgette|Great+Vibes" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Varela+Round" rel="stylesheet">
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
@@ -19,6 +21,7 @@
       <p>{{publisher}}</p>
       <p>{{type}}<p>
       <p>{{checkouts}}</p>
+      <hr>
       </div>
     </script>
   </head>
@@ -89,14 +92,18 @@
     <main>
       <div id="home-div" class="literature-font">
         <h1 class="page-title">Seattle Reads</h1>
-        <canvas id="homeCanvas" width="400" height="400"></canvas>
+        <div class="canvas-size">
+        <canvas id="homeCanvas"></canvas>
+        </div>
+        <hr>
         <article id="home-display"></article>
       </div>
       <div id="checkout-div" class="literature-font">
         <h1 class="page-title">Seattle Reads</h1>
         <button id="chart-button" name="chart-button" visible="1">Genres</button>
-        <canvas id="checkoutBarCanvas" width="400" height="400"></canvas>
-        <canvas id="checkoutPieCanvas" width="400" height="400"></canvas>
+        <canvas id="checkoutBarCanvas"></canvas>
+        <hr>
+        <canvas id="checkoutPieCanvas"></canvas>
         <article id="checkout-display"></article>
       </div>
 

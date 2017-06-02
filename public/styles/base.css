@@ -13,7 +13,8 @@ body {
 }
 
 main {
-  background-color: #cccccc ;
+  /*background-color: r*/
+  background: linear-gradient(to bottom, rgba(128, 128, 128, 0.7), rgba(128, 128, 128, .9));
   opacity: .98;
   height: 100%;
   width: 80%;
@@ -23,8 +24,8 @@ main {
 
 .toggle {
   text-decoration: none;
-  font-size: 2em;
-  color: rgba(0, 0, 0, 0.61);
+  font-size: 2.5em;
+  color: rgba(0, 0, 0, 1);
   -webkit-transition-property: left, top, background, -webkit-transform;
       -webkit-transition-duration: 0.1s, 0.1s, 0.1s, 0.1s;
       -webkit-transition-timing-function: ease-out, ease-in, linear, ease-in-out;
@@ -63,7 +64,7 @@ main {
 
 .sidebar li a {
   color: #fff;
-  font-family: 'Poiret One', cursive;
+  /*font-family: 'Poiret One', cursive;*/
   font-size: 1.2em;
   margin: 0;
   margin-bottom: 16px;
@@ -72,7 +73,13 @@ main {
   line-height: 200%;
 }
   h1 {
-  font-family: 'Poiret One', cursive;
+  /*font-family: 'Poiret One', cursive;*/
+  /*font-family: 'Courgette', cursive;*/
+  font-family: 'Great Vibes', cursive;
+  /*font-family: 'Berkshire Swash', cursive;*/
+  /*font-family: 'Aref Ruqaa', serif;*/
+  letter-spacing: .1em;
+  padding-top: 30px;
 
 }
 .page-title {
@@ -144,8 +151,6 @@ main {
   bottom: 0;
 
 }
-
-
 
 .literature-font {
 
