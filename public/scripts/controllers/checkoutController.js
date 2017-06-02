@@ -10,6 +10,8 @@ var app = app || {};
   checkoutController.initCheckout = function(){
     $('div').hide();
     $('#checkout-display').empty();
+    $('.canvas-size').show();
+    $('.canvas-pie-size').show();
     $('#checkout-div').show();
 
     let url = 'https://data.seattle.gov/resource/tjb6-zsmc.json?$order=checkouts DESC';

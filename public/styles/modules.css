@@ -5,14 +5,11 @@
   font-size: 3em;
 }
 .canvas-size{
-  margin-right: 10%;
-}
-/*.canvas-size {
-  /*margin: 0 auto;*/
-  height: 500px;
+  margin: 0 auto;
   width: 80%;
-  margin-left: 5%;
-  margin-right: 15%;
-  margin-top: 100px;
-  margin-bottom: 200px;
-}*/
+}
+
+.canvas-pie-size{
+  margin: 0 auto;
+  width: 40%;
+}

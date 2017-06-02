@@ -13,7 +13,7 @@ var app = app || {};
     let ctx = document.getElementById(barCanvas).getContext('2d');
     Chart.defaults.global.defaultFontColor = 'black';
     checkoutChart.myBarChart = new Chart(ctx, {
-      type: 'bar',
+      type: 'horizontalBar',
       data: {
         labels: bookTitles,
         datasets: [{
