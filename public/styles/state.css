@@ -14,7 +14,7 @@
     width: 8rem;
     /*width: 100%;*/
     padding: 1.5em;
-    background: #cccccc;
+    background: rgba(150, 150, 150, 0.9);
   }
 
   #range-returns{
