@@ -12,8 +12,8 @@ var app = app || {};
     let bookCheckouts = books.map(book => book.checkouts);
 
     let ctx = document.getElementById(barCanvas).getContext('2d');
-    checkoutChart.myChart = new Chart(ctx, {
-      type: 'horizontalBar',
+    checkoutChart.myBarChart = new Chart(ctx, {
+      type: 'bar',
       data: {
         labels: bookTitles,
         datasets: [{
@@ -63,7 +63,7 @@ var app = app || {};
 
     if(genreLengths) {
       ctx = document.getElementById(pieCanvas).getContext('2d');
-      checkoutChart.myChart = new Chart(ctx, {
+      checkoutChart.myPieChart = new Chart(ctx, {
         type: 'pie',
         data: {
           labels: [

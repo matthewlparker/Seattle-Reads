@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/styles/state.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
   <link rel="stylesheet" href="/styles/icons.css" />
-  <link src="https://fonts.googleapis.com/css?family=Poiret+One|Varela+Round">
+  <link src="https://fonts.googleapis.com/css?family=Poiret+One|Varela+Round" rel="stylesheet">
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
@@ -18,7 +18,7 @@
     <div class="checkout">
       <h2>{{title}}</h2>
       <p>{{type}}<p>
-        <p>{{checkouts}}</p>
+      <p>{{checkouts}}</p>
       </div>
     </script>
   </head>
@@ -28,7 +28,7 @@
     <section class="container">
       <label for="slide" class="toggle">☰</label>
       <nav class="sidebar">
-        <h1>Seattle Reads</h1>
+        <h1 class="sidebar-title">Seattle Reads</h1>
         <select id="select-month">
           <option value="1">January</option>
           <option value="2">February</option>
@@ -67,9 +67,9 @@
           <option value="MUSIC">Music</option>
           <option value="SONG">Song</option>
         </select>
-        <p>Number of returns</p>
-        <p>  Min(1)    to    Max(10)
-          <input id="range-returns" type="range" min="1" max="10" list="tickmarks">
+        <p class="number-of-returns">Number of returns</p>
+        <!-- <p class="min-to-max">  Min(1)    to    Max(10)</p> -->
+          <p class="min-to-max">1<input id="range-returns" type="range" min="1" max="10" list="tickmarks">10</p>
           <datalist id="tickmarks">
             <option value="1" label="1"></option>
             <option value="2"></option>
@@ -89,19 +89,20 @@
     </section>
     <main>
       <div id="home-div" class="literature-font">
-        <h1>The 20 most checked out books in Seattle are:</h1>
+        <h1 class="page-title">Seattle Reads</h1>
         <canvas id="homeCanvas" width="400" height="400"></canvas>
         <article id="home-display"></article>
       </div>
       <div id="checkout-div" class="literature-font">
+        <h1 class="page-title">Seattle Reads</h1>
+        <button id="chart-button" name="chart-button" visible="1">Genres</button>
         <canvas id="checkoutBarCanvas" width="400" height="400"></canvas>
         <canvas id="checkoutPieCanvas" width="400" height="400"></canvas>
-        <button id="chart-button" name="chart-button" visible="1">Genres</button>
         <article id="checkout-display"></article>
       </div>
-      <section>
-        <div id="about-div"></div>
-      </section>
+
+      <div id="about-div" class="literature-font"></div>
+
     </main>
     <script src="./scripts/models/checkout.js"></script>
     <script src="./scripts/models/checkoutChart.js"></script>
@@ -113,4 +114,4 @@
     <script src="./scripts/controllers/aboutController.js"></script>
     <script src="./scripts/controllers/routes.js"></script>
   </body>
-  </html>
+ </html>
